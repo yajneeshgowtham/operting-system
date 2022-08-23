@@ -1,0 +1,41 @@
+Report 1:
+
+Here we need to print the pte index and the pte and physical address for pte
+
+so with the help of freewalk function we create a vmprint function in vm.c
+
+we include the definition in defs.h 
+
+and write the function vmprint in vm.c
+
+helper function is used to print level wise
+
+first we print a level at parent and then we go to the child lvel using pte and function PTE2PA 
+
+and recursively call the function.
+
+
+Report 2:
+
+Here we need to stop the allocation of size which happens in sys_sbrk() 
+
+which is present in sysproc.c in kernel
+
+we need to stop the implementation of growproc() which is called in sys_sbrk()
+
+so we get the errors which are present in trap.c
+
+and vm.c the function uvmunmap 
+
+we need to add the comment of the thirs file
+
+Report 3:
+
+here instead o fusing the growproc() fumction we need to 
+
+write the function before the errors in trap.c
+
+so we do alzy allocation of 1 page size if we get a error 
+
+so we use the function is uvmalloc to help us
+
